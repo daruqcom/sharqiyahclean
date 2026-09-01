@@ -82,7 +82,14 @@ p{margin:0 0 1rem}
   .main-nav ul{flex-direction:column; gap:0}
   .main-nav a{display:block; padding:.9rem 0; border-bottom:1px solid var(--line)}
   .nav-toggle{display:block}
-  .header-cta .header-call{display:none}
+  /* Header stays to logo + hamburger only on mobile. WhatsApp is already covered by the
+     sticky bottom bar, and the language switch moves into the drawer as a normal menu item,
+     so the collapsed header never has to cram four elements into one row. */
+  .header-cta{display:none}
+  .nav-lang-mobile a{color:var(--teal-dark); font-weight:800}
+}
+@media (min-width:901px){
+  .nav-lang-mobile{display:none}
 }
 
 /* Breadcrumbs */
